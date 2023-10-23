@@ -31,7 +31,7 @@ class AstronomyShowSerializer(serializers.ModelSerializer):
             "id",
             "title",
             "description",
-            "show_theme",
+            "show_themes",
         )
 
 
@@ -47,7 +47,7 @@ class AstronomyShowListSerializer(serializers.ModelSerializer):
             "id",
             "title",
             "description",
-            "show_theme",
+            "show_themes",
             "image",
         )
 
