@@ -55,7 +55,7 @@ class AstronomyShowViewSet(
     mixins.RetrieveModelMixin,
     viewsets.GenericViewSet,
 ):
-    queryset = AstronomyShow.objects.prefetch_related("show_theme")
+    queryset = AstronomyShow.objects.prefetch_related("show_themes")
     serializer_class = AstronomyShowSerializer
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
