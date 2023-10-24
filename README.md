@@ -56,6 +56,9 @@ python manage.py runserver
 
 ## Features
 
+- Only authenticated users can create reservations and add tickets and view API info
+- Anonymous users can do only 10 requests per minute.
+- Authenticated users can do 30 requests per minute.
 - Create a show theme
 - View a show theme list and detail
 - Edit a show theme
@@ -83,7 +86,7 @@ python manage.py runserver
 - Create a reservation
 - Edit your reservations
 - Delete a reservation
-- View a reservation list or detail
+- View your reservation list or detail
 - Add astronomy show and planetarium dome to reservation
 - Delete astronomy show and planetarium dome from reservation
 - You can use the service only after registration and only with active JWT token
