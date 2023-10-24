@@ -1,11 +1,14 @@
 # planetarium_api_service
 
+
 Django project for managing planetarium API service
+
 
 Welcome to the Planetarium API service! 
 This application allows you to CRUD operations of ShowTheme, PlanetariumDome, 
 AstronomyShow, ShowSession, Reservation models, keep track of shows, 
 reservations and show schedule in your planetarium.
+
 
 - To get started, users need to register and get JWT token.
 - Default life-time of access token — 30 min, refresh token — 1 day.
@@ -15,7 +18,9 @@ view show sessions and information about different shows.
 But you can see only yours reservations and of course you can delete them.
 You can also perform all data manipulations through the admin panel.
 
+
 Also, you have documentations to all endpoints of the API (swagger or redoc).
+
 
 ## Installation
 
@@ -48,18 +53,37 @@ python manage.py runserver
 
 ## Features
 
-- Create an ingredient
-- Edit an ingredient
-- Delete an ingredient
-- Create a dish
-- Edit a dish
-- Delete dish
-- Read about dish
-- Create a cooker
-- Edit a cooker
-- Delete a cooker
-- Read about cooker
-- You can use the service only after registration
+- Create a show theme
+- View a show theme list and detail
+- Edit a show theme
+- Delete a show theme
+- Create a planetarium dome
+- Edit a planetarium dome
+- Delete a planetarium dome
+- View a planetarium dome list and detail
+- Create an astronomy show
+- Add image to astronomy show
+- View an astronomy show list and detail
+- Edit an astronomy show
+- Delete an astronomy show
+- Create a show session
+- Add astronomy show to show session
+- View a show session list and detail
+- Edit a show session
+- Delete a show session
+- Create a ticket
+- Edit a ticket
+- Delete a ticket
+- View a ticket info
+- Add ticket to reservation
+- Delete ticket from reservation
+- Create a reservation
+- Edit your reservations
+- Delete a reservation
+- View a reservation list or detail
+- Add ticket to reservation
+- Delete ticket from reservation
+- You can use the service only after registration and only with active JWT token
 
 
 ## DB structure
