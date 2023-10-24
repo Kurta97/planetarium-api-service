@@ -59,18 +59,18 @@ python manage.py runserver
 - Anonymous users can do only 10 requests per minute.
 - Authenticated users can do 30 requests per minute.
 - Create a show theme
-- View a show theme list and detail
-- Edit a show theme
-- Delete a show theme
+- View a show theme list
+- Edit a show theme (from admin panel)
+- Delete a show theme (from admin panel)
 - Create a planetarium dome
-- Edit a planetarium dome
-- Delete a planetarium dome
-- View a planetarium dome list and detail
+- Edit a planetarium dome (from admin panel)
+- Delete a planetarium dome (from admin panel)
+- View a planetarium dome list
 - Create an astronomy show
-- Add image to astronomy show
+- Add image to astronomy show (only admin)
 - View an astronomy show list and detail
-- Edit an astronomy show
-- Delete an astronomy show
+- Edit an astronomy show (from admin panel)
+- Delete an astronomy show (from admin panel)
 - Create a show session
 - Add astronomy show to show session
 - View a show session list and detail

@@ -36,6 +36,7 @@ class ShowThemeViewSet(
 ):
     queryset = ShowTheme.objects.all()
     serializer_class = ShowThemeSerializer
+    pagination_class = ReservationPagination
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
 
@@ -46,6 +47,7 @@ class PlanetariumDomeViewSet(
 ):
     queryset = PlanetariumDome.objects.all()
     serializer_class = PlanetariumDomeSerializer
+    pagination_class = ReservationPagination
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
 
@@ -57,6 +59,7 @@ class AstronomyShowViewSet(
 ):
     queryset = AstronomyShow.objects.prefetch_related("show_themes")
     serializer_class = AstronomyShowSerializer
+    pagination_class = ReservationPagination
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
     @staticmethod
@@ -120,7 +123,7 @@ class AstronomyShowViewSet(
             OpenApiParameter(
                 name="show_themes",
                 type={"type": "list", "items": {"type": "number"}},
-                description="Filter by genres id (ex. ?show_themes=1)",
+                description="Filter by show_themes id (ex. ?show_themes=1)",
                 required=False
             ),
         ]
@@ -142,6 +145,7 @@ class ShowSessionViewSet(viewsets.ModelViewSet):
         )
     )
     serializer_class = ShowSessionSerializer
+    pagination_class = ReservationPagination
     permission_classes = (IsAdminOrIfAuthenticatedReadOnly,)
 
     def get_queryset(self):
