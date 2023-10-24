@@ -24,5 +24,6 @@ urlpatterns = [
         "token/verify/",
         TokenVerifyView.as_view(),
         name="token_verify"
-    ),    path("me/", ManageUserView.as_view(), name="manage"),
+    ),
+    path("me/", ManageUserView.as_view(), name="manage"),
 ]

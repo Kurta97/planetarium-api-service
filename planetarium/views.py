@@ -135,8 +135,8 @@ class ShowSessionViewSet(viewsets.ModelViewSet):
         .select_related("astronomy_show", "planetarium_dome")
         .annotate(
             tickets_available=(
-                F("planetarium_dome__rows") *
-                F("planetarium_dome__seats_in_row")
+                F("planetarium_dome__rows")
+                * F("planetarium_dome__seats_in_row")
                 - Count("tickets")
             )
         )
@@ -177,11 +177,11 @@ class ShowSessionViewSet(viewsets.ModelViewSet):
                 required=False
             ),
             OpenApiParameter(
-                name="astronomy show title",
+                name="title of astronomy show",
                 type=str,
                 description="Filter by title (ex. ?title=astronomy_show)",
                 required=False
-            )
+            ),
         ]
     )
     def list(self, request, *args, **kwargs):
@@ -199,7 +199,7 @@ class ReservationViewSet(
     )
     serializer_class = ReservationSerializer
     pagination_class = ReservationPagination
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
         return Reservation.objects.filter(user=self.request.user)
