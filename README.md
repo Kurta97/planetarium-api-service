@@ -9,10 +9,13 @@ This application allows you to CRUD operations of ShowTheme, PlanetariumDome,
 AstronomyShow, ShowSession, Reservation models, keep track of shows, 
 reservations and show schedule in your planetarium.
 
-
-- To get started, users need to register and get JWT token.
-- Default life-time of access token — 30 min, refresh token — 1 day.
 - Download [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj?hl=en)
+- To get started, users need to register and get JWT token.
+- Also, you can use this superuser after loading data from JSON file (of course you should create a JWT token and use ModHeader in format (Authorization Bearer your_access token)
+- email: admin.user@cinema.com
+- password: pbkdf2_sha256$320000$oZqdjfUqKC500V7kk3kMmb$TBVlOMhfJxWrxbUnNpWZK0+rYM242g7do/YM5tkhn+M=
+- Default life-time of access token — 30 min, refresh token — 1 day.
+
 Once registered, you can reserve seats at the planetarium,
 view show sessions and information about different shows. 
 But you can see only yours reservations and of course you can delete them.
@@ -81,8 +84,8 @@ python manage.py runserver
 - Edit your reservations
 - Delete a reservation
 - View a reservation list or detail
-- Add ticket to reservation
-- Delete ticket from reservation
+- Add astronomy show and planetarium dome to reservation
+- Delete astronomy show and planetarium dome from reservation
 - You can use the service only after registration and only with active JWT token
 
 
