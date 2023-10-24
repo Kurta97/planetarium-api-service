@@ -65,7 +65,7 @@ class AstronomyShowViewSet(
         return [int(str_id) for str_id in qs.split(",")]
 
     def get_queryset(self):
-        """Retrieve the movies with filters"""
+        """Retrieve astronomy shows with filters"""
         title = self.request.query_params.get("title")
         show_themes = self.request.query_params.get("show_themes")
 
@@ -99,7 +99,7 @@ class AstronomyShowViewSet(
         permission_classes=[IsAdminUser],
     )
     def upload_image(self, request, pk=None):
-        """Endpoint for uploading image to specific movie"""
+        """Endpoint for uploading image to specific astronomy show"""
         astronomy_show = self.get_object()
         serializer = self.get_serializer(astronomy_show, data=request.data)
 
@@ -120,7 +120,8 @@ class AstronomyShowViewSet(
             OpenApiParameter(
                 name="show_themes",
                 type={"type": "list", "items": {"type": "number"}},
-                description="Filter by genres id (ex. ?show_themes=1)"
+                description="Filter by genres id (ex. ?show_themes=1)",
+                required=False
             ),
         ]
     )
@@ -176,11 +177,11 @@ class ShowSessionViewSet(viewsets.ModelViewSet):
                 required=False
             ),
             OpenApiParameter(
-                name="astronomy_show",
-                type=int,
-                description="Filter by movie id (ex. ?astronomy_show=3)",
-                required=False,
-            ),
+                name="astronomy show title",
+                type=str,
+                description="Filter by title (ex. ?title=astronomy_show)",
+                required=False
+            )
         ]
     )
     def list(self, request, *args, **kwargs):

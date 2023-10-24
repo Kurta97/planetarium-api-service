@@ -1,9 +1,8 @@
 asgiref==3.7.2
 attrs==23.1.0
-Django==4.2.6
+Django==4.1
 django-debug-toolbar==4.2.0
-djangorestframework==3.14.0
-djangorestframework-simplejwt==5.2.0
+djangorestframework==3.13.1
 drf-spectacular==0.22.1
 inflection==0.5.1
 jsonschema==4.19.1
