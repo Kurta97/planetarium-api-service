@@ -55,7 +55,6 @@ python manage.py runserver
 ```
 
 ## Features
-
 - Only authenticated users can create reservations and add tickets and view API info
 - Anonymous users can do only 10 requests per minute.
 - Authenticated users can do 30 requests per minute.
